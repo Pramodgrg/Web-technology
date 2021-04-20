@@ -1,0 +1,28 @@
+<!-- 1) Write JS program to find greatest number among 3 numbers -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q.No.1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a, b, c;
+		let greatest;
+		a = prompt("enter first number");
+		b = prompt("enter second number");
+		c = prompt("enter third number");
+		if(a >= b && a >= c){
+			greatest = a;
+		}  
+		else if(b >= a && b >= c){
+			greatest = b;
+		}
+		else{
+			greatest = c;
+		}
+
+		alert("the greatest no is : " + greatest);
+	</script>
+</body>
+</html>
