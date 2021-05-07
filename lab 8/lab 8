@@ -1,0 +1,51 @@
+#Starting MySQL
+
+C:\xampp\mysql\bin>mysql -u root -p
+
+#Creating Database
+
+MariaDB [(none)]> CREATE database gces;
+
+#Changing Active Database
+
+MariaDB [(none)]> USE gces;
+
+#Show Database List
+
+MariaDB [gces]> show databases;
+
+#Create Table
+
+MariaDB [gces]> CREATE TABLE student( -> id int UNIQUE AUTO_INCREMENT, -> name varchar(100), -> address varchar(100), -> phone_number int UNIQUE, -> bio text -> );
+
+#Insert Single Data
+
+MariaDB [gces]> INSERT INTO student (name,address,phone_number,bio) VALUES ("abc","address",9800000000,"hey");
+
+#Insert Multiple Data
+
+MariaDB [gces]> INSERT INTO student (name,address,phone_number,bio) VALUES ("Pramod","Nadipur",9845232211,"I am Pramod."), ("Sagun","batulechaur",846545654,"I am Sagun."), ("Abishek","new road",986546854,"I am Abishek"), ("Suman","Pholbari",9848645321,"I am Suman");
+
+#Rename Table
+
+MariaDB [gces]> ALTER TABLE student -> RENAME TO students;
+
+#Add Column
+
+MariaDB [gces]> ALTER TABLE students -> ADD (user_id int);
+
+#Update Record
+
+MariaDB [gces]> UPDATE students -> SET user_id = 34 -> WHERE id = 56;
+
+#Select Record
+
+MariaDB [gces]> SELECT * FROM students WHERE name = "Abhishek"; MariaDB [gces]> SELECT * FROM students WHERE name LIKE "a%";
+
+#Update Record
+
+MariaDB [gces]> UPDATE students -> SET address = "nadipur" -> WHERE id = 12 -> ;
+
+#Delete Record
+
+MariaDB [gces]> DELETE FROM students WHERE id = 10;
