@@ -40,7 +40,7 @@ MariaDB [gces]> UPDATE students -> SET user_id = 34 -> WHERE id = 56;
 
 #Select Record
 
-MariaDB [gces]> SELECT * FROM students WHERE name = "Abhishek"; MariaDB [gces]> SELECT * FROM students WHERE name LIKE "a%";
+MariaDB [gces]> SELECT * FROM students WHERE name = "Pramod"; MariaDB [gces]> SELECT * FROM students WHERE name LIKE "a%";
 
 #Update Record
 
